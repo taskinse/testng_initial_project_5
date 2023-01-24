@@ -18,7 +18,7 @@ public class TechGlobalLoginFormCardTest extends TechGlobalBase{
         techGlobalFrontendTestingHomePage.clickOnCard(15);
     }
 
-    @Test(priority = 1, description = "Validate Login Form card")
+    @Test(priority = 1, description = "Validate TechGlobal Login card")
     public void validateLoginForm() {
 
         Assert.assertTrue(techGlobalLoginFormPage.heading.isDisplayed());
@@ -39,7 +39,7 @@ public class TechGlobalLoginFormCardTest extends TechGlobalBase{
         Assert.assertTrue(techGlobalLoginFormPage.forgotPasswordLink.isDisplayed());
     }
 
-    @Test(priority = 2, description = "Validate Login Form card valid login")
+    @Test(priority = 2, description = "Validate TechGlobal Login card valid login")
     public void validLoginForm() {
 
         techGlobalLoginFormPage.usernameInputBox.sendKeys(TestData.validUsername);
@@ -50,7 +50,7 @@ public class TechGlobalLoginFormCardTest extends TechGlobalBase{
         Assert.assertTrue(techGlobalLoginFormPage.successLogin.isDisplayed());
         Assert.assertTrue(techGlobalLoginFormPage.logoutButton.isDisplayed());
     }
-    @Test(priority = 3, description = "Validate Login Form card valid login and then logout")
+    @Test(priority = 3, description = "Validate TechGlobal Login card valid login and then logout")
     public void validateLoginAndLogoutForm() {
 
         techGlobalLoginFormPage.usernameInputBox.sendKeys(TestData.validUsername);
@@ -62,9 +62,7 @@ public class TechGlobalLoginFormCardTest extends TechGlobalBase{
         Assert.assertTrue(techGlobalLoginFormPage.loginButton.isDisplayed());
     }
 
-    @Test(priority = 4, description = "Validate TechGlobal Login Form card " +
-            "Forgot Password? " +
-            "Link and Reset Password page")
+    @Test(priority = 4, description = "Validate TechGlobal Login card Forgot Password? Link and Reset Password page")
     public void validateForgotPassword() {
 
         techGlobalLoginFormPage.forgotPasswordLink.click();
@@ -74,7 +72,7 @@ public class TechGlobalLoginFormCardTest extends TechGlobalBase{
         Assert.assertTrue(techGlobalLoginFormPage.resetPasswordSubmitButton.isDisplayed());
     }
 
-    @Test(priority = 5, description = "Validate TechGlobal Login Form card Reset Password link")
+    @Test(priority = 5, description = "Validate TechGlobal Login card Reset Password link")
     public void validateResetPasswordLink() {
 
         techGlobalLoginFormPage.forgotPasswordLink.click();
@@ -83,8 +81,7 @@ public class TechGlobalLoginFormCardTest extends TechGlobalBase{
         Assert.assertTrue(techGlobalLoginFormPage.confirmationMessage.isDisplayed());
     }
 
-    @Test(priority = 6, description = "Validate TechGlobal Login Form card invalid login with \n" +
-            "wrong username")
+    @Test(priority = 6, description = "Validate TechGlobal Login card invalid login with wrong username")
     public void validateInvalidUsername(){
 
         techGlobalLoginFormPage.usernameInputBox.sendKeys(TestData.invalidUsername);
@@ -93,8 +90,7 @@ public class TechGlobalLoginFormCardTest extends TechGlobalBase{
         Assert.assertTrue(techGlobalLoginFormPage.errorMessageUsername.isDisplayed());
     }
 
-    @Test(priority = 7, description = "Validate TechGlobal Login Form card invalid login with \n" +
-            "wrong password")
+    @Test(priority = 7, description = "Validate TechGlobal Login card invalid login with wrong password")
     public void validateInvalidPassword(){
 
         techGlobalLoginFormPage.usernameInputBox.sendKeys(TestData.validUsername);
@@ -103,8 +99,7 @@ public class TechGlobalLoginFormCardTest extends TechGlobalBase{
         Assert.assertTrue(techGlobalLoginFormPage.errorMessagePassword.isDisplayed());
     }
 
-    @Test(priority = 8, description = "Validate TechGlobal Login Form card invalid login with \n" +
-            "both wrong credentials")
+    @Test(priority = 8, description = "Validate TechGlobal Login card invalid login with both wrong credentials")
     public void validateInvalidUsernameAndPassword(){
 
         techGlobalLoginFormPage.usernameInputBox.sendKeys(TestData.invalidUsername);
