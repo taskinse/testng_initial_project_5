@@ -4,6 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class TechGlobalLoginFormPage extends TechGlobalBasePage {
+    public TechGlobalLoginFormPage() {
+        super();
+    }
+
     @FindBy(id = "main_heading")
     public WebElement heading;
 
@@ -25,6 +29,15 @@ public class TechGlobalLoginFormPage extends TechGlobalBasePage {
     @FindBy(id = "logout")
     public WebElement logoutButton;
 
+    @FindBy(id = "success_lgn")
+    public WebElement successLogin;
+
+    @FindBy(id = "error_message")
+    public WebElement errorMessageUsername;
+
+    @FindBy(id = "error_message")
+    public WebElement errorMessagePassword;
+
     @FindBy(id = "forgot-password")
     public WebElement forgotPasswordLink;
 
@@ -40,15 +53,6 @@ public class TechGlobalLoginFormPage extends TechGlobalBasePage {
     @FindBy(id = "submit")
     public WebElement resetPasswordSubmitButton;
 
-    @FindBy(id = "success_lgn")
-    public WebElement successLogin;
-
     @FindBy(id = "confirmation_message")
     public WebElement confirmationMessage;
-
-    @FindBy(id ="error_message")
-    public WebElement errorMessage;
-
-    @FindBy(id ="error_message")
-    public WebElement errorMessagePassword;
 }

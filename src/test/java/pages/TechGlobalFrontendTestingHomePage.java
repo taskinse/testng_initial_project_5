@@ -10,10 +10,11 @@ public class TechGlobalFrontendTestingHomePage extends TechGlobalBasePage {
         super();
     }
 
-    @FindBy(css = "div[id^='card']")
+    @FindBy(css="div[id^='card']")
     public List<WebElement> cards;
 
     public void clickOnCard(int cardIndex) {
         cards.get(cardIndex).click();
+
     }
 }
